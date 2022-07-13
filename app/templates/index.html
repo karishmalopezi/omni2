@@ -1,3 +1,280 @@
-<h2>
-    The index works.
-</h2>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Essay Generator - Essays for School</title>
+      <link href="{{ url_for('static',filename='css/styles.css') }}" rel="stylesheet" />
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='assets/main.png') }}" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top"><img src = "{{ url_for('static',filename='assets/logo.png') }}"/></a>
+              
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu 
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About the Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">The Project</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#aboutus">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">Essays.arg()</h1><br>
+                        <h2 class="text-white-50 mx-auto">An Essay Generator</h2>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Created by the Code Detectors</h2>
+                        <a class="btn btn-primary" href="#signup">Try It Out!</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">The Project</h2>
+                        <p class="text-white-50">
+                            Our Code Detectors team is planning on developing an AI system that generates argumentative essays based on the different parts of an essay (counter, claim, rebuttal, evidence and conclusion) after receiving a short prompt. We want to pursue this project for educational purposes so that people can quickly and easily dive into topics that are interesting to them. We will be using a dataset called Evaluating Student Writing from Kaggle to train our AI system.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{{ url_for('static',filename='assets/img/essayphoto.jpg') }}" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Our Process</h4>
+                            <p class="text-black-50 mb-0">We decided to assign all of our team members roles and once those were determined we started our work. First, we began our project by searching for a data-set. Next, part of our team went ahead with the pre-processing and data training. Once we were finished with training we went ahead and started working on our front-end. We collaborated and discussed with our whole team how we were envisioning our website design to look. Once we agreed on a template we could begin our HTML and CSS coding. The back-end worked on connecting to the front-end.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+               <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static',filename='assets/img/challenges.png') }}" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Challenges</h4>
+                                    <p class="mb-0 text-white-50">It was extremely difficult to find a dataset to train the model 
+How did we fix it?
+We found one dataset that was similar to what we wanted so we slightly changed our project to include the subject of the essay (such as claim, conclusion, evidence, rebuttal, etc) to match the dataset 
+We also had to change that it would only generate one part of the essay based on the subject type that was given in the prompt. 
+</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                              <!-- Project One Row-->
+              <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static',filename='assets/img/demo-image-02.jpg') }}" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">What Model We Choose And How Long It Took To Train</h4>
+                                    <p class="mb-0 text-white-50">We chose GPT-2 NEO and AI textgen. We assigned two people from our team to work on training our model. The claim, counterclaim, and conclusion statements each took approximately 20 minutes to train. The evidence and rebuttal statements took around 30 minutes each to train. In the end, the whole model took 2 hours to train. 
+</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static',filename='assets/img/goals.jpg') }}" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Our Goals</h4>
+                                    <p class="mb-0 text-white-50">Our goal is to make an easy-to-use interface for a user to gain knowledge about their prompt and make essay writing more accessible. We are aware that many struggle with writing essays, so our hope would be that Essays.arg() can help make essays less intimidating and easier to write. We definitely would not want to overwhelm the user, so our whole team is working on making our Essay generator as friendly as possible.
+</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ url_for('static',filename='assets/img/demo-image-02.jpg') }}" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Future Cases And Expansions</h4>
+                                    <p class="mb-0 text-white-50">Currently we are only focusing on argumentative type of essays and statements. Our system will be able to generate claims, counterclaims, rebuttals, evidence, and conclusion statements. However, in the future we intend to increase our scope to different type of essays such as descriptive, persuasive, etc. This would allow our system to generate other types of statements such as descriptions, comparisons, and more.</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </section>
+
+
+
+        <!-- Signup-->
+
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+                        <h2 class="text-white mb-5">Try Out The Bot: </h2>
+                      <form action="{{url_for('generate_text')}}" method="POST" id="input" source="custom">
+                      <label for="subject" class="text-white mb-5">Select a subject: </label>
+            <select name="subject" id="genre" class="my-2 bg-white  border-[#C7B287] text-sm rounded-lg focus:bg-neutral-100 focus:border-[#A98F5A] w-full p-2.5">
+                <option>Claim</option>
+                <option>Rebuttal</option>
+                <option>Evidence</option>
+                <option>Conclusion</option>
+                <option>CounterClaim</option>
+                      </select><br>
+                  
+                        <label type = "text" for="number" class="text-white mb-5">Number of statements: </label>
+                        <input type="text" name = "number" class = "butt2" required>
+                            <div class="row input-group-newsletter">
+                                <div class="col"><input class="form-control" id="emailAddress" type="text" placeholder="Enter your statement here..." name = "prompt" required/></div><br>
+                                <br><br><div class="text-white mb-5">
+                                  
+                              <button type="submit" class="btn btn-primary">Generate</button></div>
+                                    
+                              
+                                                                           </div>
+                      </form></div>
+                      <div class="container text-white flex flex-col w-full mx-auto mt-16 mb-32" id="output">
+            <h3 class="max-w-md text-2xl font-serif tracking-wide text-center mx-auto">Your Output Goes Here: </h3>
+            <p class="py-6 max-w-md text-base font-sans text-center mx-auto">
+                {{generated}}
+            </p>
+        </div>
+                            
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3 mt-2 text-white">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+        </section>
+
+  
+
+        <section class="contact-section bg-black" id="aboutus">
+          <font color = "white"><center><h1>About Us</h1></center></font>
+
+        <section class="contact-section bg-black">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Riya Shetty</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Instructor<br> Email: riyashetty1598@gmail.com</div> 
+                            </div>
+                        </div>
+                    </div>
+                  
+                   <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Pooja Ragala</h4>
+                                <hr class="my-4 mx-auto" />
+                              <div class="small text-black-50">Front-end, Back-end, Product Manager<br> Email: poojaragala1@gmail.com</div> 
+
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Lauren Giglia</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Data Pre-processing, Product Manager, Back-end<br> Email: laurenfgiglia@gmail.com </div> 
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Karishma Lopez-Renteria</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Front-end<br> Email: karishmalopezi@gmail.com</div> 
+                            </div>
+                        </div>
+                    </div>
+                  
+                   <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Evelyn</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Front-end<br> Email: evelyn.sun0@gmail.com</div> 
+                            </div>
+                        </div>
+                    </div>
+                  
+                  
+                   <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Arya</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Data Pre-processing<br> Email: arya.jamkhandi@gmail.com</div> 
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Code Detectors</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static',filename='js/scripts.js') }}"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+          </body>
+          
+</html>
